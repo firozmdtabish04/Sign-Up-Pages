@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>Destructuring Array</h4>
+    <script>
+      let user = ["Tabish", 25, "CSE", 2027];
+      let [name, age, batch, year] = user;
+      console.log(name);
+      console.log(age);
+      console.log(batch);
+      console.log(year);
+      document.write(`Name : ${name} <br>`);
+      document.write(`Age : ${age} <br>`);
+      document.write(`Batch : ${batch} <br>`);
+      document.write(`Year : ${year} <br>`);
+      
+      document.write(`Using Function  <br>`);
+      function Student([name, age, batch]) {
+          document.write(`name : ${name} <br>`);
+          document.write(`age : ${age} <br>`);
+          document.write(`batch : ${batch} <br>`);
+        
+      }
+      document.write(Student(["Tabish", 21, 2026]));
+    </script>
+  </body>
+</html>

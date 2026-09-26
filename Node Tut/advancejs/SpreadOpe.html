@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread Operator</title>
+  </head>
+
+  <body>
+    <script>
+      // Array Spread
+      let arr = [12, 34, 55];
+
+      document.write(`${arr}<br>`);
+      let arr2 = [...arr];
+      document.write(arr2.join(" ") + "<br><br>");
+
+      // Object Spread
+      let obj1 = {
+        name: "Akhil",
+        age: 23,
+      };
+
+      let obj2 = {
+        course: "CSE",
+        Batch: 2026,
+      };
+      let res = { ...obj1, ...obj2 };
+      console.log(res);
+      document.write(JSON.stringify(res));
+    </script>
+  </body>
+</html>

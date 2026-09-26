@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Method Overriding</h1>
+    <script>
+      class Animal {
+        sound() {
+          console.log("Animal makes sound");
+        }
+      }
+
+      class Dog extends Animal {
+        sound() {
+          console.log("Dog barks");
+        }
+      }
+
+      let dog = new Dog();
+
+      dog.sound();
+    </script>
+  </body>
+</html>

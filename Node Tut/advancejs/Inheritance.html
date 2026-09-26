@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+  </head>
+
+  <body>
+    <h1>Employee and Manager</h1>
+
+    <script>
+      // Parent Class
+      class Employee {
+        constructor(name, age, department, gender) {
+          this.name = name;
+          this.age = age;
+          this.department = department;
+          this.gender = gender;
+        }
+
+        display() {
+          document.write(`
+            <h3>Employee Details</h3>
+            Name: ${this.name} <br>
+            Age: ${this.age} <br>
+            Department: ${this.department} <br>
+            Gender: ${this.gender} <br>
+          `);
+        }
+      }
+
+      // Child Class
+      class Manager extends Employee {
+        constructor(name, age, department, gender, salary, experience) {
+          super(name, age, department, gender);
+
+          this.salary = salary;
+          this.experience = experience;
+        }
+
+        display() {
+          document.write(`
+            <h3>Manager Details</h3>
+            Name: ${this.name} <br>
+            Age: ${this.age} <br>
+            Department: ${this.department} <br>
+            Gender: ${this.gender} <br>
+            Salary: ${this.salary} <br>
+            Experience: ${this.experience} years <br>
+          `);
+        }
+      }
+
+      // Employee Object
+      let employee = new Employee("Rahul", 25, "Development", "Male");
+
+      // Manager Object
+      let manager = new Manager("Akhil", 30, "IT", "Male", 75000, 5);
+
+      // Display both
+      employee.display();
+
+      document.write("<hr>");
+
+      manager.display();
+    </script>
+  </body>
+</html>
+                                        

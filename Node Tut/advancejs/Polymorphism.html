@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Polymorphism</h1>
+    <script>
+      class Animal {
+        sound() {
+          console.log("Animal makes sound");
+        }
+      }
+
+      class Dog extends Animal {
+        sound() {
+          console.log("Dog barks");
+        }
+      }
+
+      class Cat extends Animal {
+        sound() {
+          console.log("Cat meows");
+        }
+      }
+
+      let dog = new Dog();
+      let cat = new Cat();
+
+      dog.sound();
+      cat.sound();
+    </script>
+  </body>
+</html>

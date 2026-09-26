@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Operator</title>
+  </head>
+
+  <body>
+    <h1>Rest Operator</h1>
+
+    <script>
+      // Normal Function
+      function sum(num1, num2) {
+        return num1 + num2;
+      }
+
+      document.write("Normal Function: " + sum(20, 30) + "<br>");
+
+      // Rest Operator
+      function RESTOpe(name, ...args) {
+        let sum = 0;
+
+        document.write(`Hello ${name}<br>`);
+
+        for (let i of args) {
+          sum += i;
+        }
+
+        return sum;
+      }
+
+      document.write("Rest: " + RESTOpe("Akhil", 20, 30, 40) + "<br>");
+      document.write("Rest: " + RESTOpe("Akhil", 20, 30) + "<br>");
+
+      document.write("<br>");
+      function Student(name, batch, ...totalMarks) {
+        document.write(`My name is ${name} of ${batch} <br>`);
+
+        let sum = 0;
+        for (let i of totalMarks) {
+          sum += i;
+        }
+        return sum;
+      }
+      document.write("Total Marks: ", Student("Akhil ", "2027", 78, 89));
+    </script>
+  </body>
+</html>

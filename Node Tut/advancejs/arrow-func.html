@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+
+  <body>
+    <script>
+      document.write("<b>Arrow Function<br></b>");
+
+      // Without Arrow Function
+      let user = function hello(name) {
+        return "Without Arrow function";
+      };
+
+      document.write(user() + "<br>");
+      console.log(user());
+
+      // Using Arrow Function
+      let hello = () => "Using Arrow function";
+
+      document.write(hello() + "<br>");
+      console.log(hello());
+
+      //Using Parameter
+      document.write("<b>Using Parameter <br></b>");
+      let userName = (name, age) => {
+        return `Hello ${name} ${age} `;
+      };
+      document.write(userName("Tabish", 24) + "<br>");
+      console.log(userName("hello", 24));
+      console.log(typeof userName);
+
+      //   Function With multiple arguments
+      document.write("<b>Function With multiple arguments <br></b>");
+      function sum(num1, num2) {
+        return num1 + num2;
+      }
+      document.write(sum(20, 30));
+    </script>
+  </body>
+</html>

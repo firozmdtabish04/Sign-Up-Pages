@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>Destructuring obj</h4>
+    <script>
+      let user = {
+        name: "Tabish",
+        age: 21,
+        city: "Delhi",
+      };
+      let { name, age, city } = user;
+      console.log(name);
+      console.log(age);
+      console.log(city);
+      document.write(` Name : ${name} <br>`);
+      document.write(` Age : ${age} <br>`);
+      document.write(` City: ${city} <br>`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let fname = "Tabish";
+      let lname = "Firoz";
+      let course = "B.tech";
+
+      function Student(fname, lname, course) {
+        let fullName = fname + " " + lname;
+
+        return { fullName, course };
+      }
+
+      let student = Student(fname, lname, course);
+
+      document.write(`My name is ${student.fullName} of ${student.course}`);
+    </script>
+  </body>
+</html>

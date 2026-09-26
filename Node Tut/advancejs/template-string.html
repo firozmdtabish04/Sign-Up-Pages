@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = "Akhil";
+      let marks = 98;
+      document.write("<b>Without string template <br> </b>");
+      document.write("Hello " + user + " Welcome to 2026<br>");
+
+      document.write("<b>With string template <br> </b>");
+      document.write(`Hello "${user}"  you got ${marks}`);
+
+      document.write("<br><b>Function scope using template </b>");
+      let first = "Tabish";
+      let last = "Firoz";
+      function fullName(first, last) {
+        return ` ${first} ${last}`;
+      }
+
+      document.write(hello);
+    </script>
+  </body>
+</html>
