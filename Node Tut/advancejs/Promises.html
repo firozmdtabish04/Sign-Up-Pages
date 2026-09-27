@@ -10,17 +10,21 @@
     <h1>Promises</h1>
 
     <script>
-      let promise = new Promise((resolve, reject) => {
-        let success = true;
+      function prom(complete) {
+        return new Promise(function (resolve, reject) {
+          console.log("Fetching data, please wait.");
 
-        if (success) {
-          resolve("Promise completed successfully");
-        } else {
-          reject("Promise failed");
-        }
-      });
+          setTimeout(() => {
+            if (complete) {
+              resolve("I am successful.");
+            } else {
+              reject("I am failed.");
+            }
+          }, 3000);
+        });
+      }
 
-      promise
+      prom(true)
         .then((result) => {
           console.log(result);
         })

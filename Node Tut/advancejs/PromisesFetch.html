@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+
+  <body>
+    <h1>Fetch API using Promise</h1>
+
+    <script>
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          document.write("<pre>" + JSON.stringify(data,null,2) + "</pre>");
+        })
+        .catch((error) => {
+          console.log("Error:", error);
+        });
+    </script>
+  </body>
+</html>
